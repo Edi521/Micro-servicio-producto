@@ -1,0 +1,20 @@
+package com.mx.ProductoMS.Service;
+
+import java.util.List;
+
+import com.mx.ProductoMS.Dominio.Producto;
+
+public interface IProductoService {
+
+	public void guardar();
+	
+	public void editar();
+	
+	public void eliminar();
+	
+	public void buscra();
+	
+	public List<Producto> lista();
+	
+	
+}

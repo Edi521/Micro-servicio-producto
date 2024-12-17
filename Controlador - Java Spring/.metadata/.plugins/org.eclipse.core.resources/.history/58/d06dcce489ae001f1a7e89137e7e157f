@@ -1,0 +1,9 @@
+package com.mx.ProductoMS.Dao;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.mx.ProductoMS.Dominio.Producto;
+
+public interface IProductoDao extends JpaRepository<Producto, Integer>e{
+
+}

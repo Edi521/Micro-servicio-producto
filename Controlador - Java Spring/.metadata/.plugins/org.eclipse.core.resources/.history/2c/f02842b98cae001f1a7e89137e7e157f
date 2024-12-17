@@ -1,0 +1,51 @@
+package com.mx.ProductoMS.Service;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Sort;
+
+import com.mx.ProductoMS.Dao.IProductoDao;
+import com.mx.ProductoMS.Dominio.Producto;
+
+
+//En esta clase estan implementado todas nuestras funciones de IProductoService
+
+public class ProductoServiceImp implements IProductoService{
+
+	//Esta instruccion nos permite acceder a los metodos crud que se heredan de JpaRepository
+	@Autowired
+	private IProductoDao dao;
+
+	@Override
+	public void guardar(Producto producto) {
+		// TODO Auto-generated method stub
+		dao.save(producto);
+	}
+
+	@Override
+	public void editar(Producto producto) {
+		// TODO Auto-generated method stub
+		dao.save(producto);
+	}
+
+	@Override
+	public void eliminar(int id) {
+		// TODO Auto-generated method stub
+		dao.deleteById(id);
+	}
+
+	@Override
+	public void buscar(int id) {
+		// TODO Auto-generated method stub
+		dao.findById(id);
+	}
+
+	@Override
+	public List<Producto> lista() {
+		// TODO Auto-generated method stub
+		return dao.findAll(Sort.by(Sort.Direction.ASC,"idProducto"));  //Estamos usando sort para enlistar nustra informacion de forma ascendente por id
+	}
+	
+
+}

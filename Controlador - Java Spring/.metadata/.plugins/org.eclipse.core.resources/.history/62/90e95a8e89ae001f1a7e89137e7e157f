@@ -1,0 +1,5 @@
+package com.mx.ProductoMS.Dao;
+
+public interface IProductoDao {
+
+}
